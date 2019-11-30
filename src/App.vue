@@ -1,27 +1,22 @@
 <template>
   <div id="app">
     <Nav></Nav>
-    <Container></Container>
-    app
+    <el-button>el-button</el-button>
   </div>
 </template>
 
 <script>
 import Nav from './components/Nav'
-import Container from './components/Container'
-
 export default {
-  data () {
-    return {
-
-    }
-  },
+  name: 'app',
   components: {
-    Nav,
-    Container
+    Nav
   }
 }
 </script>
-<style lang="less">
 
+<style>
+body {
+  background:url('./assets/images/body_bg.jpg')
+}
 </style>

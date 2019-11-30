@@ -6,10 +6,7 @@ import store from './store'
 
 import './assets/css/reset.css'
 
-import axios from 'axios'
-//配置访问的Url前缀
-axios.defaults.baseURL = '/api'
-axios.defaults.headers.post['Content-Type'] = 'application/json';
+import './plugins/element.js'
 
 Vue.config.productionTip = false
 

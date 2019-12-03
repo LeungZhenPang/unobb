@@ -1,5 +1,6 @@
 <template>
   <div id="nav">
+    <div class="banner"></div>
     <!-- 搜索wrap -->
     <div class="search-wrap">
       <div class="clearfix">
@@ -194,9 +195,14 @@ export default {
 
 <style lang="less" scoped>
 @baseColor: #5d98f4;
+.banner {
+  height: 100px;
+  max-width: 1920px;
+  margin-bottom: 20px;
+  background: url('../assets/images/banner.jpg') center center no-repeat;
+}
 .search-wrap {
   width: 600px;
-  height: 100px;
   margin: 0 auto;
 }
 .search-tip {
@@ -256,6 +262,7 @@ export default {
       border-radius: 6px;
       color: #90b6f1;
       background: #fff;
+      z-index: 99;
       ul {
         padding: 6px 0px;
         li:hover {
@@ -299,6 +306,7 @@ export default {
       background: #fff;
       border: 1px solid #ccc;
       box-shadow: 2px 4px 5px #f2f2f2;
+      z-index: 99;
       li {
         padding-left: 10px;
         color: #8a8a8a;

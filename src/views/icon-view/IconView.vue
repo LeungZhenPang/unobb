@@ -1,9 +1,9 @@
 <template>
   <div class="wrap" @mousewheel="go">
     <ul class="clearfix content" v-for="(items,index) in curData" :key='index' v-show='curIndex == index'>
-      <li v-for="(item,n) in items">
+      <li v-for="(item,n) in items" :key="n">
         <a class="clearfix" :href="item.link" :key='n' target='_blank'>
-          <img :src='"./images/"+item.pic+".jpg"' :alt="item.name" />
+          <img :src='"./images/"+item.pic+".png"' :alt="item.name" />
           <div>
             <h3>{{item.name}}</h3>
             <p>{{item.description}}</p>
@@ -18,78 +18,14 @@
 </template>
 
 <script>
+import webData from './data'
 export default {
   data() {
     return {
       curIndex: 0, //当前索引
       curData: [], //当前显示数据
       showCount: 4,        //显示网页数
-      webData: {
-        tuijian: [
-          {
-            name: "推荐1",
-            description: "这里有一建、二建",
-            pic: "zhongjiaowenhua",
-            link: "https://www.baidu.com"
-          },
-          {
-            name: "推荐2",
-            description: "这里有一建、二建",
-            pic: "zhongjiaowenhua",
-            link: "https://www.baidu.com"
-          },
-          {
-            name: "推荐3",
-            description: "这里有一建、二建",
-            pic: "zhongjiaowenhua",
-            link: "https://www.baidu.com"
-          },
-          {
-            name: "推荐4",
-            description: "这里有一建、二建",
-            pic: "zhongjiaowenhua",
-            link: "https://www.baidu.com"
-          },
-          {
-            name: "推荐5",
-            description: "这里有一建、二建",
-            pic: "zhongjiaowenhua",
-            link: "https://www.baidu.com"
-          }
-        ],
-        bangdan: [
-          {
-            name: "榜单6",
-            description: "这里有一建、二建",
-            pic: "zhongjiaowenhua",
-            link: "https://www.baidu.com"
-          },
-          {
-            name: "榜单7",
-            description: "这里有一建、二建",
-            pic: "zhongjiaowenhua",
-            link: "https://www.baidu.com"
-          },
-          {
-            name: "榜单8",
-            description: "这里有一建、二建",
-            pic: "zhongjiaowenhua",
-            link: "https://www.baidu.com"
-          },
-          {
-            name: "榜单9",
-            description: "这里有一建、二建",
-            pic: "zhongjiaowenhua",
-            link: "https://www.baidu.com"
-          },
-          {
-            name: "榜单0",
-            description: "这里有一建、二建",
-            pic: "zhongjiaowenhua",
-            link: "https://www.baidu.com"
-          }
-        ]
-      },
+      webData
     };
   },
   methods: {
@@ -186,7 +122,7 @@ export default {
       width: 144px;
       padding-left: 16px;
       h3 {
-        margin-bottom: 10px;
+        margin-bottom: 2px;
         font-size: 24px;
         line-height: 32px;
         font-weight: 500;

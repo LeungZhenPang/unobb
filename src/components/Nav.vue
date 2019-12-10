@@ -61,6 +61,7 @@
               v-for="(items,index) in searchSug"
               @mouseenter="searchSugIndex = index; wd = items.q"
               @click="startSearch"
+              :key="index"
             >{{items.q}}</li>
           </ul>
         </div>
@@ -198,7 +199,7 @@ export default {
 .banner {
   height: 100px;
   max-width: 1920px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   background: url('../assets/images/banner.jpg') center center no-repeat;
 }
 .search-wrap {

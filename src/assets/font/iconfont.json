@@ -34,6 +34,13 @@
       "unicode_decimal": 58892
     },
     {
+      "icon_id": "3761554",
+      "name": "操作",
+      "font_class": "icon-test",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
       "icon_id": "4294082",
       "name": "太阳",
       "font_class": "taiyang",

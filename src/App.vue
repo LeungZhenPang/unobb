@@ -37,29 +37,18 @@ export default {
         { name: "榜单", link: "bangdan", icon: "icon-bangdan" },
         { name: "推荐", link: "tuijian", icon: "icon-tuijian" },
         { name: "视频", link: "shipin", icon: "icon-shipin" },
-        {
-          name: "音乐",
-          link: "yinyue",
-          icon: "icon-tubiaozhizuomobanyihuifu-"
-        },
+        { name: "音乐", link: "yinyue", icon: "icon-tubiaozhizuomobanyihuifu-"},
         { name: "电影", link: "dianying", icon: "icon-dianying" },
-        {
-          name: "直播",
-          link: "zhibo",
-          icon: "icon-airudiantubiaohuizhi-zhuanqu_zhibojian"
-        },
+        { name: "直播", link: "zhibo", icon: "icon-airudiantubiaohuizhi-zhuanqu_zhibojian" },
         { name: "男生", link: "nansheng", icon: "icon-nanxing" },
         { name: "女生", link: "nvsheng", icon: "icon-iconnvhai" },
         { name: "旅游", link: "lvyou", icon: "icon-lvyou" },
         { name: "摄影", link: "sheying", icon: "icon-ziyuan" },
         { name: "设计", link: "sheji", icon: "icon-shejishi1" },
         { name: "程序员", link: "chengxuyuan", icon: "icon-daimaguanli" },
-        {
-          name: "外贸",
-          link: "waimao",
-          icon: "icon-maoyijinchukoulingshoupifa"
-        },
-        { name: "每日", link: "meiri", icon: "icon-taiyang" }
+        { name: "外贸", link: "waimao", icon: "icon-maoyijinchukoulingshoupifa"},
+        { name: "每日", link: "meiri", icon: "icon-taiyang" },
+        { name: "工具", link: "gongju", icon: "icon-icon-test" }
       ]
     };
   },

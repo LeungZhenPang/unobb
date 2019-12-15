@@ -1,7 +1,8 @@
 <template>
   <div class="wrap" @mousewheel="go">
-    <ul class="clearfix content" v-for="(items,index) in curData" :key='index' v-show='curIndex == index'>
-      <li v-for="(item,n) in items" :key="n">
+    <!-- 主页面 -->
+    <transition-group tag="ul" name="fade" class="clearfix content" v-for="(items,index) in curData" :key='index' v-show='curIndex == index'>
+      <li v-for="(item,n) in items" :key="n" :class="{transition: transitionLi, toleft, toright}">
         <a class="clearfix" :href="item.link" :key='n' target='_blank'>
           <img :src='"./images/"+item.pic+".png"' :alt="item.name" />
           <div>
@@ -10,7 +11,9 @@
           </div>
         </a>
       </li>
-    </ul>
+    </transition-group>
+
+    <!-- 底部小圆点 -->
     <ul class="clearfix xiaoyuandian" :style="{marginLeft: -curData.length * 10 + 'px'}">
       <li v-for="(items,index) in curData" :class="{active:curIndex == index}" :key='index' @click="curIndex = index"></li>
     </ul>
@@ -19,23 +22,46 @@
 
 <script>
 import webData from './data'
+import { turquoise } from 'color-name';
 export default {
   data() {
     return {
       curIndex: 0, //当前索引
       curData: [], //当前显示数据
       showCount: 4,        //显示网页数
-      webData
+      webData,     //网页的所有数据
+      transitionLi: false,  //切换路由li动画
+      toleft: false,  //左切屏动画
+      toright: false,  //右切屏动画
+      gotime: ''     //保存切屏延时器
     };
   },
   methods: {
       //滚动切屏
       go(){
-          if(event.wheelDelta < 0 && this.curIndex < this.curData.length-1) {
-              this.curIndex += 1
-          }else if (event.wheelDelta > 0 && this.curIndex > 0){
-              this.curIndex -= 1
-          }
+        if(event.wheelDelta < 0 && this.curIndex < this.curData.length-1) {     //滚轮下滑
+          clearTimeout(this.gotime)     //清楚上次滚轮延时器，避免索引多次增加
+          this.toright = true         //左移动画
+          this.gotime = setTimeout(() => {      //左移动画结束后，索引增加，新元素添加右移动画再删除，形成左移效果
+            this.curIndex += 1
+            this.toright = false
+            this.toleft = true
+            setTimeout(() => {      //由于增加后立即删除无动画效果，所以延长一段时间删除
+              this.toleft = false
+            }, 150);
+          }, 200);
+        }else if (event.wheelDelta > 0 && this.curIndex > 0){     //滚轮上滑
+          clearTimeout(this.gotime)
+          this.toleft = true
+          this.gotime = setTimeout(() => {
+            this.curIndex -= 1
+            this.toleft = false
+            this.toright = true
+            setTimeout(() => {
+              this.toright = false
+            }, 150);
+          }, 200);
+        }
       },
         //转换成二维数组
       transformArr(arr) {
@@ -54,9 +80,16 @@ export default {
       }
   },
   watch: {
+    //监听路由器变化
     $route(to, from) {
-      this.transformArr(this.webData[this.$route.params.name])
-      this.curIndex = 0
+      this.transitionLi = true    //路由切换动画
+      setTimeout(() => {      //动画结束前10毫秒，重新加载数据，如果动画结束时间和重新渲染时间一致可能会导致切换完动画再渲染
+        this.transformArr(this.webData[this.$route.params.name])
+        this.curIndex = 0
+        setTimeout(() => {
+          this.transitionLi = false
+        }, 30);
+      }, 200);
     }
   },
   created() {
@@ -79,15 +112,41 @@ export default {
 .content {
   li {
     position: relative;
+    left: 0;
     float: left;
     width: 248px;
     height: 88px;
     margin: 20px 26px;
+    transition: all .3s ease-out;
+    &.toleft {
+      left: 200px;
+      opacity: 0;
+    }
+    &.toright {
+      left: -200px;
+      opacity: 0;
+    }
+    &.transition {
+      img {
+        transform: rotateX(90deg);
+      }
+      h3 {
+        left: 40px;
+        opacity: 0.5;
+        transform: skew(-20deg)
+      }
+      p {
+        left: 20px;
+        opacity: 0;
+        transform: skew(-20deg)
+      }
+    }
     &:hover {
       img {
         top: -6px;
       }
       h3 {
+        left: 0;
         color: #5d98f4;
         margin-left: 4px;
       }
@@ -115,21 +174,26 @@ export default {
       top: 0;
       float: left;
       border-radius: 44px;
-      transition: all 0.3s ease-out;
+      transform-origin: 0% 100%;
+      transition: all 0.2s ease-out;
     }
     div {
       float: left;
       width: 144px;
       padding-left: 16px;
       h3 {
+        position: relative;
+        left: 0;
         margin-bottom: 2px;
         font-size: 24px;
         line-height: 32px;
         font-weight: 500;
         color: #666;
-        transition: all 0.3s ease-out;
+        transition: all .2s ease-out;
       }
       p {
+        position: relative;
+        left: 0;
         font-size: 14px;
         line-height: 24px;
         color: #c3c3c3;
@@ -137,6 +201,7 @@ export default {
         -webkit-box-orient: vertical; /*设置或检索伸缩盒对象的子元素的排列方式*/
         -webkit-line-clamp: 2; /*用来限制在一个块元素显示的文本的行数*/
         overflow: hidden;
+        transition: all .2s ease-out;
       }
     }
   }
@@ -157,5 +222,16 @@ export default {
       background: #5d98f4;
     }
   }
+}
+
+.fade-enter, .fade-leave {
+  opacity:0;
+}
+.fade-enter-active{
+  transition:all .2s;
+}
+.fade-leave-active{
+  opacity:0;
+  transition:all .2s;
 }
 </style>

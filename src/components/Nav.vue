@@ -51,9 +51,9 @@
             ref="inputSearch"
             @input="loadSearchSug"
             @keyup.alt.q="searchWebIndex < searchData[searchTypeIndex].data.length-1?searchWebIndex += 1: searchWebIndex = 0"
-            @keyup.enter="startSearch"
-            @keyup.down="searchSugIndex < searchSug.length-1?searchSugIndex += 1: searchSugIndex = 0;wd = searchSug[searchSugIndex].q"
-            @keyup.up="searchSugIndex < searchSug.length-1?searchSugIndex -= 1: searchSugIndex = 0;wd = searchSug[searchSugIndex].q"
+            @keyup.enter.exact="startSearch"
+            @keyup.down.exact="searchSugIndex < searchSug.length-1?searchSugIndex += 1: searchSugIndex = 0;wd = searchSug[searchSugIndex].q"
+            @keyup.up.exact="searchSugIndex < searchSug.length-1?searchSugIndex -= 1: searchSugIndex = 0;wd = searchSug[searchSugIndex].q"
           />
           <ul v-show="isShowSearchSug">
             <li
@@ -71,6 +71,7 @@
 </template>
 
 <script>
+import searchData from './searchData'
 export default {
   data() {
     return {
@@ -81,74 +82,7 @@ export default {
       searchWebIndex: 0, //搜索网站索引值
       searchSugIndex: -1, //搜索建议索引值
       searchSug: "", //搜索建议数据
-      searchData: [
-        //渲染所需数据
-        {
-          searchType: "搜索",
-          data: [
-            {
-              name: "百度",
-              link: "https://www.baidu.com/s?wd=",
-              placeholder: "百度一下你就知道"
-            },
-            {
-              name: "doge",
-              link: "https://www.dogedoge.com/results?q=",
-              placeholder: "不追踪，不误导"
-            },
-            {
-              name: "微博",
-              link: "https://s.weibo.com/weibo/",
-              placeholder: "迅速搜索最热门话题"
-            },
-            {
-              name: "必应",
-              link: "https://cn.bing.com/search?q=",
-              placeholder: "微软Bing搜索引擎"
-            },
-            {
-              name: "微信",
-              link: "https://weixin.sogou.com/weixin?type=2&query=",
-              placeholder: "搜索微信文章"
-            },
-            {
-              name: "知乎",
-              link: "https://www.zhihu.com/search?type=content&q=",
-              placeholder: "搜索知乎文章"
-            },
-            {
-              name: "搜狗",
-              link: "https://www.sogou.com/web?query=",
-              placeholder: "搜狗搜索"
-            },
-            {
-              name: "360搜索",
-              link: "https://www.so.com/s?q=",
-              placeholder: "360搜索引擎"
-            },
-            {
-              name: "秘迹",
-              link: "https://mijisou.com/?q=",
-              placeholder: "搜索..."
-            }
-          ]
-        },
-        {
-          searchType: "图片",
-          data: [
-            {
-              name: "花瓣",
-              link: "https://huaban.com/search/?q=",
-              placeholder: "搜索你喜欢的"
-            },
-            {
-              name: "Pexels",
-              link: "https://www.pexels.com/search/",
-              placeholder: "用英文搜索"
-            }
-          ]
-        }
-      ]
+      searchData    //渲染搜索网站的数据
     };
   },
   methods: {
@@ -173,11 +107,11 @@ export default {
 
     // 开始搜索
     startSearch() {
+      this.isShowSearchSug = false;
       window.open(
         this.searchData[this.searchTypeIndex].data[this.searchWebIndex].link +
           this.wd
       );
-      this.isShowSearchSug = false;
     }
   },
 
@@ -203,7 +137,7 @@ export default {
   background: url('../assets/images/banner.jpg') center center no-repeat;
 }
 .search-wrap {
-  width: 600px;
+  width: 660px;
   margin: 0 auto;
 }
 .search-tip {
@@ -219,7 +153,7 @@ export default {
 .search-web {
   li {
     float: left;
-    margin: 10px 10px;
+    padding: 10px 10px;
     color: #ccc;
     cursor: pointer;
     &.active {
@@ -286,7 +220,7 @@ export default {
   .content {
     position: relative;
     height: 40px;
-    width: 500px;
+    width: 570px;
     padding-top: 10px;
     background: #fff;
     border: 1px solid @baseColor;

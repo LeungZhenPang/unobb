@@ -191,11 +191,29 @@ export default {
             link: "https://www.bilibili.com"
         },
         {
+            name: "AcFun",
+            description: "一家弹幕视频网站，致力于为每一个人带来欢乐。",
+            pic: "acfun",
+            link: "https://www.acfun.cn"
+        },
+        {
             name: "优酷",
             description: "频服务平台,提供视频播放,视频发布,视频搜索,视频分享",
             pic: "youku",
             link: "https://www.youku.com"
-        }
+        },
+        {
+            name: "酷绘",
+            description: "以高清影视剧为主的视频网站。为用户提供高清电影,电视剧,动漫,综艺等视频在线观看,以及视频分享,视频搜索等服务。",
+            pic: "kuhui",
+            link: "http://www.kuhuiv.com/"
+        },
+        {
+            name: "NO视频",
+            description: "为用户提供及时的海外热门剧集在线观看，24小时多平台同步，友好无广告，致力于最轻松的追剧体验。",
+            pic: "noshipin",
+            link: "http://www.novipnoad.com/"
+        },
     ],
     dianying: [
         {
@@ -203,6 +221,12 @@ export default {
             description: "影音集是一个电影爱好者的资讯分享站，推荐优秀电影，人工精选高分影片，部部精品。",
             pic: "yinfansi",
             link: "https://www.yinfans.me/"
+        },
+        {
+            name: "夜晚影视库",
+            description: "电影爱好者的天堂，为您倾情打造全网最全高清影视库， 带来最新、最快、最全的纯净在线高清影视资源",
+            pic: "yewanyingshiku",
+            link: "https://v.yewan.org/"
         },
         {
             name: "电影天堂",
@@ -729,6 +753,12 @@ export default {
             link: "http://www.58pic.com/"
         },
         {
+            name: "90设计",
+            description: "专注电商设计的淘宝素材库，设计交流、学习与分享一体的平台，让电商设计（淘宝美工）找灵感和素材更效率。",
+            pic: "90sheji",
+            link: "http://90sheji.com/"
+        },
+        {
             name: "创客贴",
             description: "极简好用的平面设计作图软件,在线图片编辑器,免费使用.提供免费设计模板，有海报、名片、公众号图片、PPT、邀请函等65个场景模板,一键稿定设计印刷",
             pic: "chuangketie",
@@ -741,10 +771,40 @@ export default {
             link: "https://www.gaoding.com/"
         },
         {
+            name: "凡科快图",
+            description: "在线制作图片,图片编辑工具,图片制作软件,在线图片编辑器,在线图片处理,文字图片制作,平面设计软件",
+            pic: "fankekuaitu",
+            link: "https://kt.fkw.com/"
+        },
+        {
             name: "阿里图标",
             description: "Iconfont-国内功能很强大且图标内容很丰富的矢量图标库，提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造，设计和前端开发的便捷工具",
             pic: "alitubiao",
             link: "https://www.iconfont.cn/"
+        },
+        {
+            name: "unDraw",
+            description: "Illustrations/svg...矢量图片下载",
+            pic: "undraw",
+            link: "https://undraw.co/illustrations"
+        },
+        {
+            name: "pngimg",
+            description: "搜罗上万张高质量PNG素材",
+            pic: "pngimg",
+            link: "http://pngimg.com/"
+        },
+        {
+            name: "底纹下载",
+            description: "提供在线编辑纹理的功能，纹理效果实时预览，纹理可以选择 png 的透明底格式，也可以创建 JPG 格式壁纸。很不错的PNG透明纹理下载，适用网站背景。",
+            pic: "transparenttextures",
+            link: "https://www.transparenttextures.com/"
+        },
+        {
+            name: "cssgradient",
+            description: "网上最佳渐变网站的精选列表",
+            pic: "cssgradient",
+            link: "https://cssgradient.io/gradient-backgrounds/"
         },
         {
             name: "视达网",
@@ -845,6 +905,12 @@ export default {
             link: "https://github.com/"
         },
         {
+            name: "码云",
+            description: "是 OSCHINA.NET 推出的代码托管平台,支持 Git 和 SVN,提供免费的私有仓库托管。目前已有近 400 万的开发者选择码云。",
+            pic: "mayun",
+            link: "https://gitee.com/"
+        },
+        {
             name: "极客导航",
             description: "中国专业IT职业在线教育平台,拥有海量高清IT职业课程,涵盖30+个技术领域,如Android,iOS",
             pic: "jikedaohang",
@@ -879,6 +945,18 @@ export default {
             description: "国内领先的IT在线编程及在线实训学习平台，专业导师提供精选的实践项目，创新的技术使得学习者无需配置繁琐的本地环境，随时在线流畅使用。以就业为导向，提供编程、运维、测试、云计算、大数据、数据库等",
             pic: "shiyanlou",
             link: "https://www.shiyanlou.com/"
+        },
+        {
+            name: "CODELF",
+            description: "变量命名神器!Codelf,变量命名,函数命名,方法命名,变量命名神器,GitHub 分组,Organize GitHub stars,naming things,naming convention,programming naming",
+            pic: "codelf",
+            link: "https://unbug.github.io/codelf/"
+        },
+        {
+            name: "BootCDN",
+            description: "开源项目免费 CDN 加速服务 - 我们致力于为 Bootstrap、jQuery、Angular、Vue.js 一样优秀的开源项目提供稳定、快速、免费的 CDN 加速服务。Boot...",
+            pic: "bootcdn",
+            link: "https://www.bootcdn.cn/"
         }
     ],
     waimao: [
@@ -1023,6 +1101,12 @@ export default {
             description: "视频鱼提供在线视频下载,持续更新。支持bilibili,acfun,芒果tv,cntv,新浪,搜狐等网站的视频下载",
             pic: "shipinyu",
             link: "http://shipinyu.com"
+        },
+        {
+            name: "SBKKO",
+            description: "日常干货在线工具网站分享平台 – SBKKO",
+            pic: "sbkko",
+            link: "https://www.sbkko.com/"
         }
     ]
 }

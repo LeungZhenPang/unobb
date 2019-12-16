@@ -25,6 +25,30 @@ export default {
             link: "https://www.zhihu.com"
         },
         {
+            name: "腾讯视频",
+            description: "腾讯视频致力于打造中国领先的在线视频媒体平台,以丰富的内容、极致的观看体验",
+            pic: "tengxunshipin",
+            link: "https://v.qq.com"
+        },
+        {
+            name: "爱奇艺",
+            description: "爱奇艺是拥有海量、优质、高清的网络视频的大型视频网站,专业的网络视频播放平台",
+            pic: "iqiyi",
+            link: "https://www.iqiyi.com"
+        },
+        {
+            name: "哔哩哔哩",
+            description: "bilibili是国内知名的视频弹幕网站,这里有最及时的动漫新番,最棒的ACG氛围,最有创意的Up主。",
+            pic: "bilibili",
+            link: "https://www.bilibili.com"
+        },
+        {
+            name: "优酷",
+            description: "频服务平台,提供视频播放,视频发布,视频搜索,视频分享",
+            pic: "youku",
+            link: "https://www.youku.com"
+        },
+        {
             name: "搜狐",
             description: "搜狐网为用户提供24小时不间断的最新资讯,及搜索、邮件等网络服务。内容包括全球热点事件、突发新闻",
             pic: "sohu",

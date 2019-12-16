@@ -52,17 +52,18 @@
             @input="loadSearchSug"
             @keyup.alt.q="searchWebIndex < searchData[searchTypeIndex].data.length-1?searchWebIndex += 1: searchWebIndex = 0"
             @keyup.enter.exact="startSearch"
-            @keyup.down.exact="searchSugIndex < searchSug.length-1?searchSugIndex += 1: searchSugIndex = 0;wd = searchSug[searchSugIndex].q"
-            @keyup.up.exact="searchSugIndex < searchSug.length-1?searchSugIndex -= 1: searchSugIndex = 0;wd = searchSug[searchSugIndex].q"
+            @keyup.down.exact="searchSugIndex < searchSug.length-1?searchSugIndex += 1: searchSugIndex = 0;wd = searchSug[searchSugIndex]"
+            @keyup.up.exact="searchSugIndex < searchSug.length-1?searchSugIndex -= 1: searchSugIndex = 0;wd = searchSug[searchSugIndex]"
           />
+          <!-- 搜索建议 -->
           <ul v-show="isShowSearchSug">
             <li
               :class="{active: searchSugIndex == index }"
               v-for="(items,index) in searchSug"
-              @mouseenter="searchSugIndex = index; wd = items.q"
+              @mouseenter="searchSugIndex = index; wd = items"
               @click="startSearch"
               :key="index"
-            >{{items.q}}</li>
+            >{{items}}</li>
           </ul>
         </div>
       </div>
@@ -73,6 +74,9 @@
 <script>
 import "../assets/font/iconfont.css";
 import searchData from './searchData'
+import Vue from 'vue'
+import jsonp from 'vue-jsonp'     //引入jsaonp
+Vue.use(jsonp)
 export default {
   data() {
     return {
@@ -87,23 +91,24 @@ export default {
     };
   },
   methods: {
+    // jsonpFunc(data) {
+    //   console.log(data.s)
+    // },
 
     //加载搜索建议
-    async loadSearchSug() {
+    loadSearchSug() {
       if (!this.wd) {
         this.isShowSearchSug = false;
         return false;
       }
       this.searchSugIndex = -1;
-      const { data } = await axios.get("/sugrec", {
-        params: {
-          prod: "pc",
-          wd: this.wd
-        }
-      });
-      // console.log(data);
-      this.searchSug = data.g;
-      data.g ? this.isShowSearchSug = true :this.isShowSearchSug = false
+      //Request url will be http://suggestion.baidu.com/su?wd=关键词&cb=jsonpFunc
+      Vue.jsonp('http://suggestion.baidu.com/su',{wd: this.wd, callbackQuery: 'cb',callbackName: 'jsonpFunc'})
+      .then( data => {
+        let jsonpFunc = function(){}
+        this.searchSug = data.s;
+        data.s.length != 0 ? this.isShowSearchSug = true :this.isShowSearchSug = false      //结果不为空显示搜索建议
+      })
     },
 
     // 开始搜索

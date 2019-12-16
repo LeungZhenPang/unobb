@@ -55,6 +55,13 @@
       "unicode_decimal": 59040
     },
     {
+      "icon_id": "4800117",
+      "name": "下拉",
+      "font_class": "xiala",
+      "unicode": "e7ac",
+      "unicode_decimal": 59308
+    },
+    {
       "icon_id": "4838211",
       "name": "贸易 进出口 零售 批发",
       "font_class": "maoyijinchukoulingshoupifa",

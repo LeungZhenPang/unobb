@@ -26,7 +26,7 @@
         <!-- 左边选择类型部分 -->
         <div class="type" @click.stop="isShowTypeList = !isShowTypeList">
           {{searchData[searchTypeIndex].searchType}}
-          <span class="el-icon-arrow-down" :class="{active:isShowTypeList}"></span>
+          <span class="iconfont icon-xiala" :class="{active:isShowTypeList}"></span>
           <!-- 下拉选择框 -->
           <transition name="fade">
             <div class="type-list" v-show="isShowTypeList" @mouseleave="isShowTypeList = false">
@@ -71,6 +71,7 @@
 </template>
 
 <script>
+import "../assets/font/iconfont.css";
 import searchData from './searchData'
 export default {
   data() {
@@ -132,9 +133,9 @@ export default {
 @baseColor: #5d98f4;
 .banner {
   height: 100px;
-  max-width: 1920px;
   margin: 0 auto 20px;
   background: url('../assets/images/banner.jpg') center center no-repeat;
+  background-color: #cfe6ff;
 }
 .search-wrap {
   width: 660px;
@@ -179,7 +180,7 @@ export default {
     background: @baseColor;
     cursor: pointer;
     & > span {
-      padding: 4px;
+      display: inline-block;
       transition: 0.3s linear;
       &.active {
         transform: rotate(180deg);

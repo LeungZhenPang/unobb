@@ -241,6 +241,12 @@ export default {
     ],
     dianying: [
         {
+            name: "豆瓣电影",
+            description: "提供最新的电影介绍及评论包括上映影片的影讯查询及购票服务。你可以记录想看、在看和看过的电影电视剧,顺便打分、写影评。根据你的口味,豆瓣电影会推荐好...",
+            pic: "douban",
+            link: "https://movie.douban.com/"
+        },
+        {
             name: "音范丝",
             description: "影音集是一个电影爱好者的资讯分享站，推荐优秀电影，人工精选高分影片，部部精品。",
             pic: "yinfansi",
@@ -974,7 +980,7 @@ export default {
             name: "CODELF",
             description: "变量命名神器!Codelf,变量命名,函数命名,方法命名,变量命名神器,GitHub 分组,Organize GitHub stars,naming things,naming convention,programming naming",
             pic: "codelf",
-            link: "https://unbug.github.io/codelf/"
+            link: "https://codeif.xinke.org.cn//"
         },
         {
             name: "BootCDN",

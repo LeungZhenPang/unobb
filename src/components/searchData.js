@@ -34,7 +34,7 @@ export default [
             },
             {
                 name: "codelf",
-                link: "https://unbug.github.io/codelf/#",
+                link: "https://codeif.xinke.org.cn/#",
                 placeholder: "变量命名神器"
             },
             {

@@ -987,6 +987,12 @@ export default {
             description: "开源项目免费 CDN 加速服务 - 我们致力于为 Bootstrap、jQuery、Angular、Vue.js 一样优秀的开源项目提供稳定、快速、免费的 CDN 加速服务。Boot...",
             pic: "bootcdn",
             link: "https://www.bootcdn.cn/"
+        },
+        {
+            name: "MDN",
+            description: "网站提供开放网络(Open Web)技术有关的信息,包括用于网站和渐进式网络应用的 HTML、CSS 和 API。",
+            pic: "mdn",
+            link: "https://developer.mozilla.org/zh-CN/"
         }
     ],
     waimao: [

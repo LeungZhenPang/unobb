@@ -46,6 +46,11 @@ export default [
                 name: "淘宝",
                 link: "https://s.taobao.com/search?q=",
                 placeholder: "淘宝网"
+            },
+            {
+                name: "MDN",
+                link: "https://developer.mozilla.org/zh-CN/search?q=",
+                placeholder: "MDN Web 文档"
             }
         ]
     },

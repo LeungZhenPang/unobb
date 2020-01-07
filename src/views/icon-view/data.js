@@ -221,10 +221,52 @@ export default {
             link: "https://www.acfun.cn"
         },
         {
+            name: "芒果TV",
+            description: "大家都在看的在线视频网站-热门综艺最新电影电视剧在线观看",
+            pic: "mangguotv",
+            link: "https://www.mgtv.com/"
+        },
+        {
             name: "优酷",
             description: "频服务平台,提供视频播放,视频发布,视频搜索,视频分享",
             pic: "youku",
             link: "https://www.youku.com"
+        },
+        {
+            name: "梨视频",
+            description: "中国领先的资讯类短视频生产者,由资深媒体团队和全球拍客共同创造,专注为年青一代提供适合移动终端观看和分享的短视频产品,内容涵盖商业、社会",
+            pic: "lishipin",
+            link: "https://www.pearvideo.com/"
+        },
+        {
+            name: "PP视频",
+            description: "国内领先的综合视频门户网站平台，视频内容丰富多元，包括电视剧、电影、动漫、综艺、体育、娱乐、游戏、搞笑、旅游、财富、少儿、教育、",
+            pic: "ppshipin",
+            link: "http://www.pptv.com/"
+        },
+        {
+            name: "56视频",
+            description: "中国原创视频网站,免费上传搞笑逗趣生活视频，观看优质丰富的特色节目，关注感兴趣的原创导演和美女解说，快速分享及评论互动。",
+            pic: "56shipin",
+            link: "https://www.56.com/"
+        },
+        {
+            name: "搜狐视频",
+            description: "搜狐旗下专业的综合视频网站，提供正版高清电影、电视剧、综艺、纪录片、动漫等。网罗最新最热新闻、娱乐咨询，同时提供免费视频空间和视频分享",
+            pic: "souhushipin",
+            link: "https://tv.sohu.com/"
+        },
+        {
+            name: "乐视视频",
+            description: "是以正版,高清影视剧为主的视频门户,乐视旗下专业影视剧视频网站。为用户提供正版高清电影,电视剧,动漫,综艺等视频在线观看",
+            pic: "leshitv",
+            link: "http://www.le.com/"
+        },
+        {
+            name: "咪咕视频",
+            description: "在线视频网站-海量正版高清视频在线观看",
+            pic: "migushipin",
+            link: "http://www.miguvideo.com/"
         },
         {
             name: "酷绘",

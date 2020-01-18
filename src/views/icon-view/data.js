@@ -891,6 +891,18 @@ export default {
             link: "https://68ps.com/"
         },
         {
+            name: "46设计师",
+            description: "最全的设计师导航网站，电商网页UI设计师必备的设计网址导航网站大全，精选优秀设计网站、设计教程、免费无版权可商用设计素材下载和设计技巧",
+            pic: "46shejishi",
+            link: "http://www.46design.com/"
+        },
+        {
+            name: "TOPYS",
+            description: "顶尖文案,顶尖创意,灵感库,创意,艺术,设计,商业,文化,科技,广告,文案,分享平台,创意阅读,创意内容,灵感视频,灵感手抄本",
+            pic: "topys",
+            link: "https://www.topys.cn/"
+        },
+        {
             name: "优设导航",
             description: "专为设计师提供ps教程、UI设计、素材下载、高清图库、配色方案、用户体验、网页设计等全方位设计师网站导航指引。",
             pic: "youshedaohang",
@@ -903,16 +915,10 @@ export default {
             link: "http://hao.shejidaren.com/"
         },
         {
-            name: "46设计师",
-            description: "最全的设计师导航网站，电商网页UI设计师必备的设计网址导航网站大全，精选优秀设计网站、设计教程、免费无版权可商用设计素材下载和设计技巧",
-            pic: "46shejishi",
-            link: "http://www.46design.com/"
-        },
-        {
-            name: "TOPYS",
-            description: "顶尖文案,顶尖创意,灵感库,创意,艺术,设计,商业,文化,科技,广告,文案,分享平台,创意阅读,创意内容,灵感视频,灵感手抄本",
-            pic: "topys",
-            link: "https://www.topys.cn/"
+            name: "搜图导航",
+            description: "精选及整理国内外最优秀的设计行业网站,根据工种智能推荐、账号收藏云同步、自定义站点、只为创意而生,给你最全面的设计网址导航。包含免费素材,设计工具,...",
+            pic: "91sotu",
+            link: "https://www.91sotu.com/"
         }
     ],
     chengxuyuan: [
@@ -983,12 +989,6 @@ export default {
             link: "https://gitee.com/"
         },
         {
-            name: "极客导航",
-            description: "中国专业IT职业在线教育平台,拥有海量高清IT职业课程,涵盖30+个技术领域,如Android,iOS",
-            pic: "jikedaohang",
-            link: "https://www.jikedaohang.com/"
-        },
-        {
             name: "Parallax",
             description: "Parallax Scrolling, Java Cryptography, YAML, Python Data Science, Java i18n, GitLab, TestRail, VersionOne, DBUtils, Common CLI, Seaborn, Ansible, LOLCODE, Current Affairs 2018, Intellij Idea, Apache Commons Collections, Java 9, GSON, TestLink, Inter Process Communication (IPC), Logo, PySpark, Google Tag Manager, Free IFSC Code, SAP Workflow",
             pic: "parallax",
@@ -1035,6 +1035,36 @@ export default {
             description: "网站提供开放网络(Open Web)技术有关的信息,包括用于网站和渐进式网络应用的 HTML、CSS 和 API。",
             pic: "mdn",
             link: "https://developer.mozilla.org/zh-CN/"
+        },
+        {
+            name: "极客导航",
+            description: "中国专业IT职业在线教育平台,拥有海量高清IT职业课程,涵盖30+个技术领域,如Android,iOS",
+            pic: "jikedaohang",
+            link: "https://www.jikedaohang.com/"
+        },
+        {
+            name: "animista",
+            description: "CSS动态效果样式自定义",
+            pic: "animista",
+            link: "https://animista.net/"
+        },
+        {
+            name: "AniCollection",
+            description: "CSS动态效果预设收藏集合",
+            pic: "anicollection",
+            link: "http://anicollection.github.io/"
+        },
+        {
+            name: "Animate.css",
+            description: "一款强大的预设css3动画库",
+            pic: "Animate",
+            link: "https://daneden.github.io/animate.css/"
+        },
+        {
+            name: "WOW.js",
+            description: "一款帮助你实现滚动页面时触发CSS 动画效果的插件",
+            pic: "wow",
+            link: "https://www.delac.io/wow/"
         }
     ],
     waimao: [
@@ -1185,6 +1215,12 @@ export default {
             description: "日常干货在线工具网站分享平台 – SBKKO",
             pic: "sbkko",
             link: "https://www.sbkko.com/"
+        },
+        {
+            name: "高效搜罗",
+            description: "精准的职业导航,定时更新分享优质职业书签",
+            pic: "gaoxiaosouluo",
+            link: "http://www.gaoxiaosouluo.com/"
         }
     ]
 }

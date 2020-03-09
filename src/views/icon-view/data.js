@@ -1065,6 +1065,12 @@ export default {
             description: "一款帮助你实现滚动页面时触发CSS 动画效果的插件",
             pic: "wow",
             link: "https://www.delac.io/wow/"
+        },
+        {
+            name: "路过图床",
+            description: "提供图片上传和图片外链服务, 原图保存, 全球CDN加速",
+            pic: "imgchr",
+            link: "https://imgchr.com/"
         }
     ],
     waimao: [

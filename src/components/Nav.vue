@@ -1,6 +1,14 @@
 <template>
   <div id="nav">
-    <div class="banner"></div>
+    <div class="banner" @mousemove="lightMove">
+      <div class="shapes">
+        <div class="shape shape-1" :style="{left: cursorX3 + 'px',top: cursorY3 + 'px'}"></div>
+        <div class="shape shape-2" :style="{left: cursorX2 + 'px',top: cursorY2 + 'px'}"></div>
+        <div class="shape shape-3" :style="{left: cursorX + 'px',top: cursorY + 'px'}"></div>
+      </div>
+      <div class="banner-top"></div>
+      <div class="cursor-bg" :style="{left: cursorX + 'px',top: cursorY + 'px'}"></div>
+    </div>
     <!-- 搜索wrap -->
     <div class="search-wrap">
       <div class="clearfix">
@@ -87,13 +95,32 @@ export default {
       searchWebIndex: 0, //搜索网站索引值
       searchSugIndex: -1, //搜索建议索引值
       searchSug: "", //搜索建议数据
-      searchData    //渲染搜索网站的数据
+      searchData,    //渲染搜索网站的数据
+      cursorX: 0,
+      cursorY: 0,
+      cursorX2: 0,
+      cursorY2: 0,
+      cursorX3: 0,
+      cursorY3: 0
     };
   },
   methods: {
     // jsonpFunc(data) {
     //   console.log(data.s)
     // },
+    //鼠标在banner处移动时，获取鼠标位置
+    lightMove(e){
+      this.cursorX = e.clientX - 50
+      this.cursorY = e.clientY - 50
+      setTimeout(()=>{
+        this.cursorX2 = e.clientX - 50
+        this.cursorY2 = e.clientY - 50
+      },80)
+      setTimeout(()=>{
+        this.cursorX3 = e.clientX - 50
+        this.cursorY3 = e.clientY - 50
+      },160)
+    },
 
     //加载搜索建议
     loadSearchSug() {
@@ -137,10 +164,59 @@ export default {
 <style lang="less" scoped>
 @baseColor: #5d98f4;
 .banner {
+  position: relative;
+  overflow: hidden;
+  cursor: none;
   height: 100px;
   margin: 0 auto 20px;
-  background: url('../assets/images/banner.jpg') center center no-repeat;
-  background-color: #cfe6ff;
+  // background: url('../assets/images/banner.jpg') center center no-repeat;
+  background-color: #153a63;
+  // cursor: none;
+  .shapes {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .shape {
+      position: absolute;
+    }
+    .shape-1 {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: #499af3;
+    }
+    .shape-2 {
+      width: 80px;
+      height: 80px;
+      margin: 40px;
+      border-radius: 50%;
+      background: #ffe5e3;
+    }
+    .shape-3 {
+      width: 40px;
+      height: 40px;
+      margin: 60px;
+      border-radius: 50%;
+      background: #ffcc57;
+    }
+  }
+  .banner-top{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/images/banner_top.png') center center no-repeat;
+  }
+  .cursor-bg {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    margin: 60px;
+    border-radius: 50%;
+    background: url('../assets/images/cursor_bg.png');
+  }
 }
 .search-wrap {
   width: 660px;

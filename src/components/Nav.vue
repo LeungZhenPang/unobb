@@ -207,7 +207,7 @@ export default {
     left:0;
     width: 100%;
     height: 100%;
-    background: url('../assets/images/banner_top.png') center center no-repeat;
+    background: url('../assets/images/banner_top.png') center center;
   }
   .cursor-bg {
     position: absolute;

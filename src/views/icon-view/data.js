@@ -135,6 +135,18 @@ export default {
             link: "http://www.dxy.cn"
         },
         {
+            name: "医学微视",
+            description: "中国医学科普微视频百科全书",
+            pic: "yixueweishi",
+            link: "https://www.mvyxws.com/"
+        },
+        {
+            name: "全历史",
+            description: "通过高度时空化、关联化数据的方式构造及展现数字人文内容，尤其是历史知识。让用户沉浸在纵横开阔、左图右史的（历史、人文、社科等）知识海洋中。",
+            pic: "quanlishi",
+            link: "https://www.allhistory.com/"
+        },
+        {
             name: "壹心理",
             description: "壹心理，2000万人选择的心理学服务平台。你内心困惑的问题，在壹心理可以找到答案。我们提供系统的心理健康服务：包括心理学课程、心理咨询、心理测评、心理FM以及心理科普文章。",
             pic: "yixinli",

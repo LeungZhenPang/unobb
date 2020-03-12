@@ -32,8 +32,10 @@
 
     <!-- 建议框 -->
     <div class="suggest-wrap" v-show="isShowSuggest">
-     <Suggest v-show="isShowSuggest"
-    @closeSuggest="closeSuggest()"></Suggest>
+      <transition name="suggest-fade">
+        <Suggest v-show="isShowSuggest"
+        @closeSuggest="closeSuggest()"></Suggest>
+      </transition>
     </div>
   </div>
 </template>
@@ -145,5 +147,15 @@ export default {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, .6);
+}
+
+//建议弹框动画
+.suggest-fade-enter-active,
+.suggest-fade-leave-active {
+  transition: all .5s;
+}
+.suggest-fade-enter, .suggest-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(-30px);
 }
 </style>

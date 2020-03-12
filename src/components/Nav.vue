@@ -1,5 +1,6 @@
 <template>
   <div id="nav">
+    <!-- 顶部banner部分 -->
     <div class="banner" @mousemove="lightMove">
       <div class="shapes">
         <div class="shape shape-1" :style="{left: cursorX3 + 'px',top: cursorY3 + 'px'}"></div>

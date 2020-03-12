@@ -2,6 +2,13 @@
   <div id="app">
     <Nav></Nav>
 
+    <span 
+    class="suggest-btn" 
+    @click="isShowSuggest = !isShowSuggest"
+    >
+    →&nbsp;意见反馈
+    </span>
+
     <!-- 路由导航 -->
     <div class="router-nav">
       <ul class="clearfix">
@@ -22,12 +29,19 @@
     </div>
 
     <router-view></router-view>
+
+    <!-- 建议框 -->
+    <div class="suggest-wrap" v-show="isShowSuggest">
+     <Suggest v-show="isShowSuggest"
+    @closeSuggest="closeSuggest()"></Suggest>
+    </div>
   </div>
 </template>
 
 <script>
 import "./assets/font/iconfont.css";
 import Nav from "./components/Nav";
+import Suggest from "./components/Suggest";
 export default {
   name: "app",
   data() {
@@ -49,11 +63,18 @@ export default {
         { name: "外贸", link: "waimao", icon: "icon-maoyijinchukoulingshoupifa"},
         { name: "每日", link: "meiri", icon: "icon-taiyang" },
         { name: "工具", link: "gongju", icon: "icon-icon-test" }
-      ]
+      ],
+      isShowSuggest: true    //控制显示意见反馈
     };
   },
   components: {
-    Nav
+    Nav,
+    Suggest
+  },
+  methods: {
+    closeSuggest() {
+      this.isShowSuggest = !this.isShowSuggest
+    }
   }
 };
 </script>
@@ -101,5 +122,28 @@ export default {
     background: @baseColor;
     transition: all 0.3s ease-in-out;
   }
+}
+
+.suggest-btn{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: 520px;
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #b7b7b7;
+  border: 1px solid #d6d6d6;
+  cursor: pointer;
+}
+
+// 建议框底部遮罩
+.suggest-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
 }
 </style>

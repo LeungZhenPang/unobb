@@ -403,6 +403,54 @@ export default {
             description: "年轻人里最流行的音乐APP之一,也是全球最大的3D音乐平台。echo将颠覆你对音乐的一切体验。在这里,发现前所未有的好听音乐、3D神奇立体音效、弹幕评论..",
             pic: "echo",
             link: "http://www.app-echo.com"
+        },
+        {
+            name: "音悦Tai",
+            description: "音悦Tai-是以高清MV为主的娱乐视频网站，提供高品质音乐视频在线观看服务。同时也是偶像和粉丝的聚集地，既可以购买明星专辑和周边，也可以参与各式各样的线下活动。",
+            pic: "yinyue",
+            link: "http://www.yinyuetai.com"
+        },
+        {
+            name: "豆瓣FM",
+            description: "让好音乐继续 豆瓣精选",
+            pic: "doubanfm",
+            link: "https://douban.fm/"
+        },
+        {
+            name: "蜻蜓FM",
+            description: "有声小说-有声读物-电台广播在线听书-蜻蜓FM",
+            pic: "qingtingfm",
+            link: "https://www.qingting.fm/"
+        },
+        {
+            name: "喜马拉雅",
+            description: "专业的音频分享平台,汇集了有声小说,有声读物,有声书,FM电台,儿童睡前故事,",
+            pic: "ximalaya",
+            link: "https://www.ximalaya.com/"
+        },
+        {
+            name: "猫耳FM",
+            description: "第一家弹幕音图站,同时也是中国声优基地,在这里可以听电台,音乐,翻唱,小说和广播剧,用二次元声音连接三次元.",
+            pic: "maoerfm",
+            link: "https://www.missevan.com/"
+        },
+        {
+            name: "荔枝FM",
+            description: "专业的音频分享平台,汇集了听音乐,英语,睡前故事,儿童故事,有声小说,相声段子,历史人文,有声书等数亿条音频,超过2亿用户选择的网络FM,随时随地，想听就听，你喜爱的音频尽在荔枝。",
+            pic: "lizhifm",
+            link: "https://www.lizhi.fm/"
+        },
+        {
+            name: "凤凰FM",
+            description: "金牌节目这里有最火的新闻主播,有最新的新闻mp3下载,精彩纷呈,不容错过! 好声音尽在凤凰FM,凤凰电台！",
+            pic: "fenghuangfm",
+            link: "http://diantai.ifeng.com/"
+        },
+        {
+            name: "企鹅FM",
+            description: "腾讯公司推出的音频电台分享平台，提供最热门的网络电台节目。点歌台、鬼故事、星座风水",
+            pic: "qiefm",
+            link: "https://fm.qq.com/"
         }
     ],
     zhibo: [
@@ -413,16 +461,16 @@ export default {
             link: "https://www.douyu.com/"
         },
         {
+            name: "B站直播",
+            description: "热门游戏直播,游戏直播,高清游戏直播,电子竞技直播,lol直播,cf直播,dota2直播,美女直播,弹幕,字幕,动漫,动漫音乐,游戏",
+            pic: "bilibili",
+            link: "https://live.bilibili.com/"
+        },
+        {
             name: "虎牙",
             description: "以游戏直播为主的弹幕式互动直播平台,累计注册用户2亿,提供热门游戏直播、电竞赛事直播与游戏赛事直播,手游直播等。包含王者荣耀,绝地求生,荒野行动等游戏...",
             pic: "huyazhibo",
             link: "http://www.huya.com/"
-        },
-        {
-            name: "YY",
-            description: "致力于打造全民娱乐的互动直播平台,以多样的美女互动、优质的直播内容、极致的互动体验,满足用户音乐、舞蹈、户外等直播及绝地求生、王者荣耀等热门游戏直播的观看...",
-            pic: "yyzhibo",
-            link: "http://www.yy.com/"
         },
         {
             name: "战旗直播",
@@ -447,6 +495,12 @@ export default {
             description: "集视频交友与美女在线表演为一体的视频交友网站,这里有美女视频直播、美女视频聊天、美女视频表演,看美女主播,与美女视频互动。九秀,一个美女如云网站!",
             pic: "jiuxiuwang",
             link: "http://www.9xiu.com/"
+        },
+        {
+            name: "YY",
+            description: "致力于打造全民娱乐的互动直播平台,以多样的美女互动、优质的直播内容、极致的互动体验,满足用户音乐、舞蹈、户外等直播及绝地求生、王者荣耀等热门游戏直播的观看...",
+            pic: "yyzhibo",
+            link: "http://www.yy.com/"
         }
     ],
     nansheng: [
@@ -1199,6 +1253,12 @@ export default {
     ],
     gongju: [
         {
+            name: "娃娃工具",
+            description: "一个包含大量在线工具网站，包含语言工具，便民查询，转换工具，生理健康，站长工具等，致力为广大网友提供便利的在线工具服务。",
+            pic: "wawagongju",
+            link: "https://www.iamwawa.cn/"
+        },
+        {
             name: "NiceTool",
             description: "好工具网致力于收集打造各种简单易用在线工具，网友无需注册和下载安装即可使用。",
             pic: "nicetool",
@@ -1206,9 +1266,15 @@ export default {
         },
         {
             name: "云端应用",
-            description: "超级好用的云端超级应用空间",
+            description: "Ps、Ai、PPT、Excel 超级好用的云端超级应用空间",
             pic: "uzer",
             link: "https://uzer.me"
+        },
+        {
+            name: "在线工具",
+            description: "程序员的工具箱",
+            pic: "zaixiangongju",
+            link: "https://tool.lu/"
         },
         {
             name: "多搜搜",

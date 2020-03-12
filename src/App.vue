@@ -66,7 +66,7 @@ export default {
         { name: "每日", link: "meiri", icon: "icon-taiyang" },
         { name: "工具", link: "gongju", icon: "icon-icon-test" }
       ],
-      isShowSuggest: true    //控制显示意见反馈
+      isShowSuggest: false    //控制显示意见反馈
     };
   },
   components: {

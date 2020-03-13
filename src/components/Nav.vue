@@ -65,7 +65,11 @@
             @keyup.up.exact="searchSugIndex < searchSug.length-1?searchSugIndex -= 1: searchSugIndex = 0;wd = searchSug[searchSugIndex]"
           />
           <!-- 清空搜索小按钮 -->
-          <div class="clear-input" v-show="isShowClearInputBtn" @click="wd = '';$refs.inputSearch.focus()">×</div>
+          <div class="clear-input"
+           v-show="wd===''?false:true" 
+           @click="wd = '';$refs.inputSearch.focus()">
+           ×
+           </div>
           <!-- 搜索建议 -->
           <ul v-show="isShowSearchSug">
             <li
@@ -149,11 +153,6 @@ export default {
         this.searchData[this.searchTypeIndex].data[this.searchWebIndex].link +
           this.wd
       );
-    }
-  },
-  computed: {
-    isShowClearInputBtn: function(){      //控制显示清空输入按钮
-      return this.wd === ''?false:true
     }
   },
 

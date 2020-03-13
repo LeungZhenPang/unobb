@@ -1305,7 +1305,13 @@ export default {
             description: "精准的职业导航,定时更新分享优质职业书签",
             pic: "gaoxiaosouluo",
             link: "http://www.gaoxiaosouluo.com/"
-        }
+        },
+        {
+            name: "EveryTimeZone",
+            description: "很容易找到准确的时间差与视觉时区转换器。为你在世界各地的联系人、地点和地方找到会议时间。永远不要让你的大脑再次被时区数学扭曲。",
+            pic: "everytimezone",
+            link: "https://everytimezone.com/"
+        },
     ]
 }
 

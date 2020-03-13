@@ -64,13 +64,15 @@
             @keyup.down.exact="searchSugIndex < searchSug.length-1?searchSugIndex += 1: searchSugIndex = 0;wd = searchSug[searchSugIndex]"
             @keyup.up.exact="searchSugIndex < searchSug.length-1?searchSugIndex -= 1: searchSugIndex = 0;wd = searchSug[searchSugIndex]"
           />
+          <!-- 清空搜索小按钮 -->
+          <div class="clear-input" v-show="isShowClearInputBtn" @click="wd = '';$refs.inputSearch.focus()">×</div>
           <!-- 搜索建议 -->
           <ul v-show="isShowSearchSug">
             <li
               :class="{active: searchSugIndex == index }"
               v-for="(items,index) in searchSug"
-              @mouseenter="searchSugIndex = index; wd = items"
-              @click="startSearch"
+              @mouseenter="searchSugIndex = index"
+              @click="startSearch(items)"
               :key="index"
             >{{items}}</li>
           </ul>
@@ -140,12 +142,18 @@ export default {
     },
 
     // 开始搜索
-    startSearch() {
+    startSearch(items) {
+      if(typeof(items) == 'string'){this.wd = items}
       this.isShowSearchSug = false;
       window.open(
         this.searchData[this.searchTypeIndex].data[this.searchWebIndex].link +
           this.wd
       );
+    }
+  },
+  computed: {
+    isShowClearInputBtn: function(){      //控制显示清空输入按钮
+      return this.wd === ''?false:true
     }
   },
 
@@ -314,6 +322,14 @@ export default {
       padding-left: 8px;
       border: none;
       outline: none;
+    }
+    .clear-input {
+      position: absolute;
+      top: 8px;
+      right: 6px;
+      color: #ccc;
+      font-size: 20px;
+      cursor: pointer;
     }
     ul {
       position: absolute;

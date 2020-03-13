@@ -325,7 +325,7 @@ export default {
     .clear-input {
       position: absolute;
       top: 8px;
-      right: 6px;
+      right: 10px;
       color: #ccc;
       font-size: 20px;
       cursor: pointer;

@@ -1132,12 +1132,6 @@ export default {
             pic: "wow",
             link: "https://www.delac.io/wow/"
         },
-        {
-            name: "路过图床",
-            description: "提供图片上传和图片外链服务, 原图保存, 全球CDN加速",
-            pic: "imgchr",
-            link: "https://imgchr.com/"
-        }
     ],
     waimao: [
         {
@@ -1277,10 +1271,10 @@ export default {
             link: "https://tool.lu/"
         },
         {
-            name: "多搜搜",
-            description: "搜图神器，为您提供图片搜索以及图片搜索引擎，推荐无版权图片，可商用图片，无版权可商用图片网站，并提供PPT工具，PPT模版，PPT背景图片，PPT教程，以及设计、建筑、规划、景观设计行业搜索聚合服务。",
-            pic: "duososo",
-            link: "http://duososo.com/"
+            name: "草料二维码",
+            description: "国内专业的二维码服务提供商，提供二维码生成，美化，印制，管理，统计等服务，帮助企业通过二维码展示信息并采集线下数据，提升营销和管理效率。",
+            pic: "caoliao",
+            link: "https://cli.im/"
         },
         {
             name: "临时邮箱",
@@ -1307,11 +1301,41 @@ export default {
             link: "http://www.gaoxiaosouluo.com/"
         },
         {
+            name: "百度脑图",
+            description: "便捷的脑图编辑工具。让您在线上直接创建、保存并分享你的思路。",
+            pic: "baidunaotu",
+            link: "https://naotu.baidu.com/"
+        },
+        {
+            name: "亿图",
+            description: "轻松搞定200余种办公绘图",
+            pic: "yitu",
+            link: "https://www.edrawmax.cn/online/"
+        },
+        {
+            name: "自由钢琴",
+            description: "致力于为钢琴爱好者、音乐爱好者提供一个优雅、简洁的平台，在学习工作之余可以在线弹钢琴",
+            pic: "autopiano",
+            link: "https://www.autopiano.cn/"
+        },
+        {
+            name: "多搜搜",
+            description: "搜图神器，为您提供图片搜索以及图片搜索引擎，推荐无版权图片，可商用图片，无版权可商用图片网站，并提供PPT工具，PPT模版，PPT背景图片，PPT教程，以及设计、建筑、规划、景观设计行业搜索聚合服务。",
+            pic: "duososo",
+            link: "http://duososo.com/"
+        },
+        {
             name: "EveryTimeZone",
             description: "很容易找到准确的时间差与视觉时区转换器。为你在世界各地的联系人、地点和地方找到会议时间。永远不要让你的大脑再次被时区数学扭曲。",
             pic: "everytimezone",
             link: "https://everytimezone.com/"
         },
+        {
+            name: "路过图床",
+            description: "提供图片上传和图片外链服务, 原图保存, 全球CDN加速",
+            pic: "imgchr",
+            link: "https://imgchr.com/"
+        }
     ]
 }
 

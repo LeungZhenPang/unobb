@@ -95,6 +95,12 @@ export default {
             description: "房天下是房地产家居网络平台,提供及时的房地产新闻资讯内容,为楼盘提供网上浏览、业主论坛和社区网站",
             pic: "fangtianxia",
             link: "http://www.fang.com"
+        },
+        {
+            name: "慢慢买",
+            description: "比价网,导购网站平台,数码比价,家电比价，购物比价",
+            pic: "manmanbuy",
+            link: "http://manmanbuy.com/"
         }
     ],
     tuijian: [
@@ -1243,6 +1249,12 @@ export default {
             description: "爱阅读,每日一文,每天一篇精彩文章!... 每日一文 文章 声音 书架 双琴祭梁晓声那两棵树,最适合取其材而做琴。并且,肯定能够做成两把音质优良的小提琴。",
             pic: "meiriyiwen",
             link: "https://meiriyiwen.com/"
+        },
+        {
+            name: "东方财富",
+            description: "上证指数,000001,东方财富网,大盘指数,个股,股票,行情,大盘,指数,板块,权证,基金,综合排行,自选股,高速行情。",
+            pic: "dongfangcaifu",
+            link: "http://quote.eastmoney.com/zs000001.html"
         }
     ],
     gongju: [
@@ -1301,16 +1313,22 @@ export default {
             link: "http://www.gaoxiaosouluo.com/"
         },
         {
-            name: "百度脑图",
-            description: "便捷的脑图编辑工具。让您在线上直接创建、保存并分享你的思路。",
-            pic: "baidunaotu",
-            link: "https://naotu.baidu.com/"
+            name: "MindMaster",
+            description: "在线思维导图软件,MindMaster网页版，MindMaster在线版，思维导图网页版",
+            pic: "mindmaster",
+            link: "https://mm.edrawsoft.cn/"
         },
         {
             name: "亿图",
             description: "轻松搞定200余种办公绘图",
             pic: "yitu",
             link: "https://www.edrawmax.cn/online/"
+        },
+        {
+            name: "百度脑图",
+            description: "便捷的脑图编辑工具。让您在线上直接创建、保存并分享你的思路。",
+            pic: "baidunaotu",
+            link: "https://naotu.baidu.com/"
         },
         {
             name: "自由钢琴",

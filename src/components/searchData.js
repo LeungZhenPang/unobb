@@ -141,7 +141,7 @@ export default [
         data: [
             {
                 name: "疯狂影视",
-                link: "http://ifkdy.com/?q=",
+                link: "http://ifkdy.com/search?key==",
                 placeholder: "输入影视关键词"
             },
             {

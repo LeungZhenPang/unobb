@@ -951,16 +951,22 @@ export default {
             link: "https://cssgradient.io/gradient-backgrounds/"
         },
         {
-            name: "视达网",
-            description: "一家设计师培训网站，这里提供的视频教程包含ps教程、ps视频教程、电商运营、海报、平面设计、字体设计、c4d教程、ai教程等，您可在线传授技能，亦可在线学习你所需的一技之长。",
-            pic: "shidawang",
-            link: "http://shida66.com/"
+            name: "爱给",
+            description: "免费素材下载网站,免费提供免费的音效配乐|3D模型|视频|游戏素材资源下载。",
+            pic: "aigei",
+            link: "http://www.aigei.com/"
         },
         {
             name: "Ps联盟",
             description: "Photoshop专业教程网，提供专业/详细的Photoshop（PS）教程、使用技巧、图片处理技术、漂亮的文字效果，以及各类视频教程",
             pic: "pslianmeng",
             link: "https://68ps.com/"
+        },
+        {
+            name: "视达网",
+            description: "一家设计师培训网站，这里提供的视频教程包含ps教程、ps视频教程、电商运营、海报、平面设计、字体设计、c4d教程、ai教程等，您可在线传授技能，亦可在线学习你所需的一技之长。",
+            pic: "shidawang",
+            link: "http://shida66.com/"
         },
         {
             name: "46设计师",
@@ -1107,6 +1113,18 @@ export default {
             description: "网站提供开放网络(Open Web)技术有关的信息,包括用于网站和渐进式网络应用的 HTML、CSS 和 API。",
             pic: "mdn",
             link: "https://developer.mozilla.org/zh-CN/"
+        },
+        {
+            name: "插件库",
+            description: "jQuery插件库-收集最全最新最好的jQuery插件",
+            pic: "jq22",
+            link: "http://www.jq22.com/"
+        },
+        {
+            name: "codepen",
+            description: "优秀前端demo的展示。",
+            pic: "codepen",
+            link: "https://codepen.io/"
         },
         {
             name: "极客导航",

@@ -154,6 +154,7 @@ export default {
         this.searchData[this.searchTypeIndex].data[this.searchWebIndex].link +
           this.wd
       );
+      this.$refs.inputSearch.select()
     }
   },
 

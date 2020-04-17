@@ -63,6 +63,7 @@
             @keyup.enter.exact="startSearch"
             @keyup.down.exact="searchSugIndex < searchSug.length-1?searchSugIndex += 1: searchSugIndex = 0;wd = searchSug[searchSugIndex]"
             @keyup.up.exact="searchSugIndex < searchSug.length-1?searchSugIndex -= 1: searchSugIndex = 0;wd = searchSug[searchSugIndex]"
+            @keyup.space.stop=""
           />
           <!-- 清空搜索小按钮 -->
           <div class="clear-input"
@@ -165,6 +166,13 @@ export default {
     })
     //搜索框聚焦
     _this.$refs.inputSearch.focus();
+
+    //点击空格搜索框获取焦点或全选
+    document.addEventListener('keyup',function(event){
+      if(event.keyCode == 32){
+        _this.$refs.inputSearch == ""?_this.$refs.inputSearch.focus():_this.$refs.inputSearch.select()
+      }
+    })
   }
 };
 </script>

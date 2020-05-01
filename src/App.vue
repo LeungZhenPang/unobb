@@ -19,6 +19,7 @@
           @click.native="routerNavIndex = index"
           :to="'/'+ item.link"
           tag="li"
+          replace
         >
           <span class="iconfont" :class="item.icon"></span>
           <br />

@@ -1115,6 +1115,12 @@ export default {
             link: "https://developer.mozilla.org/zh-CN/"
         },
         {
+            name: "Picsum",
+            description: "随机生成图片,可以将精美的图片直接放置到需要放置图片的地方",
+            pic: "picsum",
+            link: "https://picsum.photos/"
+        },
+        {
             name: "插件库",
             description: "jQuery插件库-收集最全最新最好的jQuery插件",
             pic: "jq22",

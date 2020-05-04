@@ -313,6 +313,12 @@ export default {
             link: "https://www.yinfans.me/"
         },
         {
+            name: "片库",
+            description: "高清电影,电影下载,BT种子,BT下载",
+            pic: "pianku",
+            link: "https://www.pianku.tv/"
+        },
+        {
             name: "夜晚影视库",
             description: "电影爱好者的天堂，为您倾情打造全网最全高清影视库， 带来最新、最快、最全的纯净在线高清影视资源",
             pic: "yewanyingshiku",

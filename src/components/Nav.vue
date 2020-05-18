@@ -7,8 +7,20 @@
         <div class="shape shape-2" :style="{left: cursorX2 + 'px',top: cursorY2 + 'px'}"></div>
         <div class="shape shape-3" :style="{left: cursorX + 'px',top: cursorY + 'px'}"></div>
       </div>
-      <div class="banner-top"></div>
+      <div class="banner-top" :class="isNight?'night-bg':'day-bg'"></div>
       <div class="cursor-bg" :style="{left: cursorX + 'px',top: cursorY + 'px'}"></div>
+
+      <!-- 天气 -->
+      <div class="weather" v-if="weather">
+        <div :class="weatherClass"></div>
+        <div class="weather-txt">
+          <p>
+            <span class="iconfont icon-weizhi"></span>
+            {{weather.city}}
+          </p>
+          <p>{{weather.tem}}°C {{weather.wea}}</p>
+        </div>
+      </div>
     </div>
     <!-- 搜索wrap -->
     <div class="search-wrap">
@@ -35,7 +47,10 @@
         <!-- 左边选择类型部分 -->
         <div class="type" @click.stop="isShowTypeList = !isShowTypeList">
           {{searchData[searchTypeIndex].searchType}}
-          <span class="iconfont icon-xiala" :class="{active:isShowTypeList}"></span>
+          <span
+            class="iconfont icon-xiala"
+            :class="{active:isShowTypeList}"
+          ></span>
           <!-- 下拉选择框 -->
           <transition name="fade">
             <div class="type-list" v-show="isShowTypeList" @mouseleave="isShowTypeList = false">
@@ -63,14 +78,14 @@
             @keyup.enter.exact="startSearch"
             @keyup.down.exact="searchSugIndex < searchSug.length-1?searchSugIndex += 1: searchSugIndex = 0;wd = searchSug[searchSugIndex]"
             @keyup.up.exact="searchSugIndex < searchSug.length-1?searchSugIndex -= 1: searchSugIndex = 0;wd = searchSug[searchSugIndex]"
-            @keyup.space.stop=""
+            @keyup.space.stop
           />
           <!-- 清空搜索小按钮 -->
-          <div class="clear-input"
-           v-show="wd===''?false:true" 
-           @click="wd = '';$refs.inputSearch.focus()">
-           ×
-           </div>
+          <div
+            class="clear-input"
+            v-show="wd===''?false:true"
+            @click="wd = '';$refs.inputSearch.focus()"
+          >×</div>
           <!-- 搜索建议 -->
           <ul v-show="isShowSearchSug">
             <li
@@ -89,27 +104,32 @@
 
 <script>
 import "../assets/font/iconfont.css";
-import searchData from './searchData'
-import Vue from 'vue'
-import jsonp from 'vue-jsonp'     //引入jsaonp
-Vue.use(jsonp)
+import searchData from "./searchData";
+import Vue from "vue";
+import jsonp from "vue-jsonp"; //引入jsaonp
+import Axios from "axios";
+Vue.use(jsonp);
+
 export default {
   data() {
     return {
       isShowTypeList: false, //是否现实搜索类型
-      isShowSearchSug: false,   //显示搜索建议
+      isShowSearchSug: false, //显示搜索建议
       wd: "", //搜索关键字
       searchTypeIndex: 0, //搜索类型索引值
       searchWebIndex: 0, //搜索网站索引值
       searchSugIndex: -1, //搜索建议索引值
       searchSug: "", //搜索建议数据
-      searchData,    //渲染搜索网站的数据
+      searchData, //渲染搜索网站的数据
       cursorX: 0,
       cursorY: 0,
       cursorX2: 0,
       cursorY2: 0,
       cursorX3: 0,
-      cursorY3: 0
+      cursorY3: 0,
+      weather: null, //保存天气数据
+      weatherClass: "rainbow", //天气动画类名
+      isNight: false //是否晚上
     };
   },
   methods: {
@@ -117,17 +137,17 @@ export default {
     //   console.log(data.s)
     // },
     //鼠标在banner处移动时，获取鼠标位置
-    lightMove(e){
-      this.cursorX = e.clientX - 50
-      this.cursorY = e.clientY - 50
-      setTimeout(()=>{
-        this.cursorX2 = e.clientX - 50
-        this.cursorY2 = e.clientY - 50
-      },80)
-      setTimeout(()=>{
-        this.cursorX3 = e.clientX - 50
-        this.cursorY3 = e.clientY - 50
-      },160)
+    lightMove(e) {
+      this.cursorX = e.clientX - 50;
+      this.cursorY = e.clientY - 50;
+      setTimeout(() => {
+        this.cursorX2 = e.clientX - 50;
+        this.cursorY2 = e.clientY - 50;
+      }, 80);
+      setTimeout(() => {
+        this.cursorX3 = e.clientX - 50;
+        this.cursorY3 = e.clientY - 50;
+      }, 160);
     },
 
     //加载搜索建议
@@ -138,48 +158,88 @@ export default {
       }
       this.searchSugIndex = -1;
       //Request url will be http://suggestion.baidu.com/su?wd=关键词&cb=jsonpFunc
-      Vue.jsonp('http://suggestion.baidu.com/su',{wd: this.wd, callbackQuery: 'cb',callbackName: 'jsonpFunc'})
-      .then( data => {
-        let jsonpFunc = function(){}
+      Vue.jsonp("http://suggestion.baidu.com/su", {
+        wd: this.wd,
+        callbackQuery: "cb",
+        callbackName: "jsonpFunc"
+      }).then(data => {
+        let jsonpFunc = function() {};
         this.searchSug = data.s;
-        data.s.length != 0 ? this.isShowSearchSug = true :this.isShowSearchSug = false      //结果不为空显示搜索建议
-      })
+        data.s.length != 0
+          ? (this.isShowSearchSug = true)
+          : (this.isShowSearchSug = false); //结果不为空显示搜索建议
+      });
     },
 
     // 开始搜索
     startSearch(items) {
-      if(typeof(items) == 'string'){this.wd = items}
+      if (typeof items == "string") {
+        this.wd = items;
+      }
       this.isShowSearchSug = false;
       window.open(
         this.searchData[this.searchTypeIndex].data[this.searchWebIndex].link +
           this.wd
       );
-      this.$refs.inputSearch.select()
+      this.$refs.inputSearch.select();
+    },
+
+    //获取天气数据
+    async getWeather() {
+      let { data } = await Axios({
+        method: "get",
+        url: "https://v1.alapi.cn/api/tianqi/now"
+      });
+      this.weather = data.data;
+      let hours = new Date().getHours();
+      hours >= 6 && hours < 20 ? (this.isNight = false) : (this.isNight = true);
+
+      switch(this.weather.wea_img){
+        case 'yin':
+        case 'yun':
+          this.weatherClass = 'cloudy'
+          break;
+        case 'yu':
+          this.weatherClass = 'rainy'
+          break;
+        case 'qing':
+          this.isNight? this.weatherClass = 'starry': this.weatherClass = 'sunny'
+          break
+        default:
+          this.weatherClass = 'rainbow'
+      }
     }
   },
 
   mounted() {
     let _this = this;
     // 点击空白处
-    document.addEventListener('click', function (e) {
-    　_this.isShowTypeList = false;
-      _this.isShowSearchSug = false; 
-    })
+    document.addEventListener("click", function(e) {
+      _this.isShowTypeList = false;
+      _this.isShowSearchSug = false;
+    });
     //搜索框聚焦
     _this.$refs.inputSearch.focus();
 
     //点击空格搜索框获取焦点或全选
-    document.addEventListener('keyup',function(event){
-      if(event.keyCode == 32){
-        _this.$refs.inputSearch == ""?_this.$refs.inputSearch.focus():_this.$refs.inputSearch.select()
+    document.addEventListener("keyup", function(event) {
+      if (event.keyCode == 32) {
+        _this.$refs.inputSearch == ""
+          ? _this.$refs.inputSearch.focus()
+          : _this.$refs.inputSearch.select();
       }
-    })
+    });
+
+    //获取天气数据
+    this.getWeather();
+    setInterval(this.getWeather.bind(this),1200000)
   }
 };
 </script>
 
 <style lang="less" scoped>
 @baseColor: #5d98f4;
+@import url("../../src/assets/css/weather.css");
 .banner {
   position: relative;
   overflow: hidden;
@@ -187,7 +247,7 @@ export default {
   height: 100px;
   margin: 0 auto 20px;
   // background: url('../assets/images/banner.jpg') center center no-repeat;
-  background-color: #153a63;
+  background-color: #fff;
   // cursor: none;
   .shapes {
     position: relative;
@@ -218,13 +278,18 @@ export default {
       background: #ffcc57;
     }
   }
-  .banner-top{
+  .banner-top {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: url('../assets/images/banner_top.png') center center;
+  }
+  .night-bg {
+    background: url("../assets/images/banner_top_night.png") center center;
+  }
+  .day-bg {
+    background: url("../assets/images/banner_top_day.png") center center;
   }
   .cursor-bg {
     position: absolute;
@@ -232,7 +297,7 @@ export default {
     height: 53px;
     margin: 60px;
     border-radius: 50%;
-    background: url('../assets/images/cursor_bg.png');
+    background: url("../assets/images/cursor_bg.png");
   }
 }
 .search-wrap {
@@ -369,5 +434,27 @@ export default {
 .fade-leave-to {
   margin-top: -10px;
   opacity: 0;
+}
+
+.weather {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  color: #fff;
+  margin-left: 300px;
+  .weather-txt {
+    position: absolute;
+    left: 120px;
+    top: 20px;
+    font-size: 20px;
+    line-height: 32px;
+    p {
+      width: 150px;
+    }
+    .icon-weizhi {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+  }
 }
 </style>

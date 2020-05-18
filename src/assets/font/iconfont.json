@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "6303919",
+      "name": "位置",
+      "font_class": "weizhi",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "4800117",
+      "name": "下拉",
+      "font_class": "xiala",
+      "unicode": "e7ac",
+      "unicode_decimal": 59308
+    },
+    {
+      "icon_id": "3761554",
+      "name": "操作",
+      "font_class": "icon-test",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
       "icon_id": "714761",
       "name": "设计师1",
       "font_class": "shejishi1",
@@ -34,13 +55,6 @@
       "unicode_decimal": 58892
     },
     {
-      "icon_id": "3761554",
-      "name": "操作",
-      "font_class": "icon-test",
-      "unicode": "e60d",
-      "unicode_decimal": 58893
-    },
-    {
       "icon_id": "4294082",
       "name": "太阳",
       "font_class": "taiyang",
@@ -53,13 +67,6 @@
       "font_class": "tubiaozhizuomobanyihuifu-",
       "unicode": "e6a0",
       "unicode_decimal": 59040
-    },
-    {
-      "icon_id": "4800117",
-      "name": "下拉",
-      "font_class": "xiala",
-      "unicode": "e7ac",
-      "unicode_decimal": 59308
     },
     {
       "icon_id": "4838211",

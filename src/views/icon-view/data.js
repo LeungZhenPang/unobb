@@ -1121,6 +1121,24 @@ export default {
             link: "https://developer.mozilla.org/zh-CN/"
         },
         {
+            name: "ALAPI",
+            description: "免费API服务,支持短网址缩短,快递查询,天气接口,翻译接口,网易云接口等... ALAPI,免费API服务,支持短网址缩短,快递查询,天气接口,翻译接口,网易云接口等...",
+            pic: "alapi",
+            link: "https://www.alapi.net/"
+        },
+        {
+            name: "Vue",
+            description: "一套构建用户界面的渐进式框架。 Vue 只关注视图层, 采用自底向上增量开发的设计。",
+            pic: "vue",
+            link: "https://cn.vuejs.org/"
+        },
+        {
+            name: "React",
+            description: "使用一个名为 render() 的方法,接收输入的数据并返回需要展示的内容。在示例中这种类似 XML 的写法被称为 JSX。",
+            pic: "react",
+            link: "https://react.docschina.org/"
+        },
+        {
             name: "Picsum",
             description: "随机生成图片,可以将精美的图片直接放置到需要放置图片的地方",
             pic: "picsum",

@@ -981,6 +981,18 @@ export default {
             link: "http://www.46design.com/"
         },
         {
+            name: "觅元素",
+            description: "设计元素免费下载,免抠素材,位图,透明背景素材,透明背景图片,免抠png,高清png,图片素材,漂浮元素,装饰元素,节日元素,动植物元素,字体元素,标签元素,设计元素",
+            pic: "miyuansu",
+            link: "http://www.51yuansu.com/"
+        },
+        {
+            name: "removebg",
+            description: "消除图片背景：100% 自动 – 只需 5 秒 – 无需点击 – 免费。",
+            pic: "removebg",
+            link: "https://www.remove.bg/zh"
+        },
+        {
             name: "TOPYS",
             description: "顶尖文案,顶尖创意,灵感库,创意,艺术,设计,商业,文化,科技,广告,文案,分享平台,创意阅读,创意内容,灵感视频,灵感手抄本",
             pic: "topys",

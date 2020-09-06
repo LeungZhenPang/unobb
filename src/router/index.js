@@ -5,7 +5,7 @@ import IconView from '../views/icon-view/IconView.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', redirect: '/bangdan' },	
+  { path: '/', redirect: '/tuijian' },	
   { path: '/:name', component: IconView,}
 ]
 

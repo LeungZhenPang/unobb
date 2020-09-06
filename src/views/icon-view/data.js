@@ -105,6 +105,24 @@ export default {
     ],
     tuijian: [
         {
+            name: "微博",
+            description: "随时随地发现新鲜事！微博带你欣赏世界上每一个精彩瞬间，了解每一个幕后故事。分享你想表达的，让全世界都能听到你的心声！",
+            pic: "weibo",
+            link: "https://weibo.com"
+        },
+        {
+            name: "知乎",
+            description: "有问题,上知乎。知乎是中文互联网知名知识分享平台",
+            pic: "zhihu",
+            link: "https://www.zhihu.com"
+        },
+        {
+            name: "豆瓣",
+            description: "提供图书、电影、音乐唱片的推荐、评论和价格比较,以及城市独特的文化生活。",
+            pic: "douban",
+            link: "https://www.douban.com"
+        },
+        {
             name: "果壳",
             description: "果壳网是一个泛科技主题网站,提供负责任、有智趣、贴近生活的内容,你可以在这里阅读",
             pic: "guoke",
@@ -298,6 +316,12 @@ export default {
             pic: "noshipin",
             link: "http://www.novipnoad.com/"
         },
+        {
+            name: "好看视频",
+            description: "拥有数十万视频创作者,独家海量高清短视频,分类覆盖VLOG、影视、娱乐、搞笑、音乐、游戏等全方位优质视频,每天观看次数数十亿次,深度了解您的喜好,好看到停...",
+            pic: "haokanshipin",
+            link: "https://haokan.baidu.com/"
+        },
     ],
     dianying: [
         {
@@ -366,6 +390,44 @@ export default {
             pic: "putaoyingshi",
             link: "http://www.putaoys.com/"
         }
+    ],
+    gouwu: [
+        {
+            name: "淘宝",
+            description: "亚洲较大的网上交易平台，提供各类服饰、美容、家居、数码、话费/点卡充值…",
+            pic: "taobao",
+            link: "https://www.taobao.com"
+        },
+        {
+            name: "京东",
+            description: "专业的综合网上购物商城,为您提供正品低价的购物选择、优质便捷的服务体验。",
+            pic: "jingdong",
+            link: "https://www.jd.com"
+        },
+        {
+            name: "慢慢买",
+            description: "比价网,导购网站平台,数码比价,家电比价，购物比价",
+            pic: "manmanbuy",
+            link: "http://manmanbuy.com/"
+        },
+        {
+            name: "蘑菇街",
+            description: "中国领先的时尚目的地。公司通过形式多样的时尚内容，种类丰富的时尚商品，以及结合红人直播、买手选款+智能推荐的售卖方式，让人们在分享和发现流行趋势的同时，尽情享受优质的购物体验。2011年，蘑菇街正式上线",
+            pic: "mogujie",
+            link: "https://www.mogujie.com/"
+        },
+        {
+            name: "唯品会",
+            description: "以1-7折超低折扣对全球各大品牌进行限时特卖，商品囊括服装、化妆品、家居、奢侈品等上千品牌。100%正品、低价、货到付款、7天无理由退货。",
+            pic: "weipinhui",
+            link: "https://www.vip.com/"
+        },
+        {
+            name: "贝贝",
+            description: "1亿妈妈信赖之选，每天1折起限时特卖，童装童鞋、母婴用品、居家百货、女装鞋包等天天上新，正品保证，全场包邮。",
+            pic: "beibei",
+            link: "http://www.beibei.com/"
+        },
     ],
     yinyue: [
         {
@@ -539,6 +601,11 @@ export default {
             description: "专业IT门户网站,为用户和经销商提供IT资讯和行情报价,涉及电脑,手机,数码产品,软件等.",
             pic: "taipingyangdiannao",
             link: "https://www.pconline.com.cn/"
+        }, {
+            name: "OP.GG",
+            description: "Real-time LoL Stats! Check your Summoner, Live Spectate and using powerful global League of Legends Statistics!",
+            pic: "opgg",
+            link: "http://www.op.gg/"
         },
         {
             name: "多玩游戏",
@@ -711,7 +778,18 @@ export default {
             link: "http://www.vdolady.com/"
         }
     ],
-    lvyou: [
+    chuxing: [
+        {
+            name: "12306",
+            description: "全国列车时刻表查询及在线预订",
+            pic: "12306",
+            link: "https://www.12306.cn/index/"
+        }, {
+            name: "中国天气",
+            description: "全中国天气网官方权威发布天气预报,逐三小时天气预报,提供天气预报查询一周,天气预报15天查询,天气预报40天查询,空气质量,生活指数,旅游出行,交通天气等查询服务",
+            pic: "zhongguotianqi",
+            link: "http://www.weather.com.cn/"
+        },
         {
             name: "马蜂窝",
             description: "靠谱的旅游攻略,自由行,自助游分享社区,海量旅游景点图片、游记、交通、美食、购物等自由行旅游攻略信息,马蜂窝旅游网获取自由行,自助游攻略信息更全面",
@@ -1017,6 +1095,32 @@ export default {
             link: "https://www.91sotu.com/"
         }
     ],
+    jianji: [
+        {
+            name: "NEWCGER",
+            description: "致力于为广大影视后期设计师打造相互交流、分享作品与经验的互动平台。",
+            pic: "newcger",
+            link: "https://www.newcger.com/"
+        },
+        {
+            name: "LOOKAE",
+            description: "大众脸为您提供的后期技术交流平台，欢迎您的到来。",
+            pic: "lookae",
+            link: "https://www.lookae.com/"
+        },
+        {
+            name: "网易见外",
+            description: "网易人工智能旗下AI视频翻译产品,支持一键生成双语字幕",
+            pic: "wangyijianwai",
+            link: "https://jianwai.youdao.com/"
+        },
+        {
+            name: "语音合成",
+            description: "在线语音合成服务可进行在线文字转换成语音,可以输入300字以内的文本进行在线语音合成。",
+            pic: "zaixianai",
+            link: "http://www.zaixianai.cn/voiceCompose"
+        },
+    ],
     chengxuyuan: [
         {
             name: "W3c",
@@ -1199,6 +1303,56 @@ export default {
             link: "https://www.delac.io/wow/"
         },
     ],
+    xinmeiti: [
+        {
+            name: "鸟哥笔记",
+            description: "分享App运营推广实战经验、新媒体营销、小程序、抖音营销案例,致力于帮助从业者高效提升专业技能、推动...",
+            pic: "niaogebiji",
+            link: "https://www.niaogebiji.com/"
+        },
+        {
+            name: "知微事见",
+            description: "全的互联网社会热点聚合平台,最深度的事件真相解读,在这里,读懂网络中国。... @社会网络与数据挖掘",
+            pic: "zhiweishijian",
+            link: "https://ef.zhiweidata.com/"
+        },
+        {
+            name: "产品经理",
+            description: "人人都是产品经理致力为产品新人、产品经理等广大产品爱好者打造一个良好的学习交流平台。深度剖析国内外互联网业内动态,分享产品设计、交互设计、视觉设计、用户体验...",
+            pic: "woshipm",
+            link: "http://www.woshipm.com/"
+        },
+        {
+            name: "句易网",
+            description: "为您提供2020年最新广告法违禁词在线过滤工具,欢迎使用,工具适用于各类房地产,医疗等行业文案新闻稿检查,词库包含各类禁语极限用语,不断完善中...",
+            pic: "juyiwang",
+            link: "http://www.ju1.cn/"
+        },
+        {
+            name: "3节课",
+            description: "互联网人的在线大学,为您提供专业成体系的产品经理培训课程、互联网运营培训课程及营销培训课程,三节课是专注于“能力提升”的互联网人在线大学,志愿者和...",
+            pic: "sanjieke",
+            link: "https://www.sanjieke.cn/"
+        },
+        {
+            name: "文案狗",
+            description: "给文案狗一点灵感。收集各种中文创意文案,广告语,让您取名,找slogan不再难。",
+            pic: "wenangou",
+            link: "http://wenangou.com/"
+        },
+        {
+            name: "易媒",
+            description: "新自媒体运营数据分析、舆情监测、表单工具、内容分发平台大全",
+            pic: "yimei",
+            link: "https://www.yimeizhushou.cn/daohang.html"
+        },
+        {
+            name: "Cnwebe",
+            description: "免费学习新媒体运营、品牌营销、广告文案、社群运营、用户运营等相关知识,由浅入深,让你从新媒体营销小白变大神。我们邀请了大批新媒体、自...全",
+            pic: "cnwebe",
+            link: "https://www.cnwebe.com/"
+        },
+    ],
     waimao: [
         {
             name: "阿里巴巴",
@@ -1299,6 +1453,30 @@ export default {
             link: "https://www.vmovier.com/"
         },
         {
+            name: "搜狐",
+            description: "搜狐网为用户提供24小时不间断的最新资讯,及搜索、邮件等网络服务。内容包括全球热点事件、突发新闻",
+            pic: "sohu",
+            link: "http://www.sohu.com/"
+        },
+        {
+            name: "新浪网",
+            description: "浪网为全球用户24小时提供全面及时的中文资讯，内容覆盖国内外突发新闻事件、体坛赛事、娱乐时尚、产业资",
+            pic: "xinlang",
+            link: "https://www.sina.com.cn/"
+        },
+        {
+            name: "网易",
+            description: "网易是中国领先的互联网技术公司,为用户提供免费邮箱、游戏、搜索引擎服务,开设新闻、娱乐、体育等30多个内容频道,及博客",
+            pic: "wangyi",
+            link: "https://www.163.com"
+        },
+        {
+            name: "今日头条",
+            description: "基于数据挖掘的推荐引擎产品,它为用户推荐有价值的、个性化的信息,提供连接人与信息的新型服务",
+            pic: "toutiao",
+            link: "https://www.toutiao.com"
+        },
+        {
             name: "ONE",
             description: "每天只为你准备一张图片、一篇文字和一个问答 韩寒主编和监制 原《独唱团》主创成员共同制作- 也可搜索 - 韩寒一个 或 ONE一个...",
             pic: "one",
@@ -1325,10 +1503,10 @@ export default {
             link: "https://www.iamwawa.cn/"
         },
         {
-            name: "NiceTool",
+            name: "在线工具",
             description: "好工具网致力于收集打造各种简单易用在线工具，网友无需注册和下载安装即可使用。",
-            pic: "nicetool",
-            link: "http://www.nicetool.net/"
+            pic: "zaixiangongju2",
+            link: "https://www.zxgj.cn/"
         },
         {
             name: "云端应用",
@@ -1352,7 +1530,13 @@ export default {
             name: "临时邮箱",
             description: "临时邮箱、10分钟邮箱、十分钟邮箱、临时邮、临时Email、快速注册Email、自动刷新接收！",
             pic: "linshiyouxiang",
-            link: "http://mail.bccto.me/"
+            link: "https://www.linshiyouxiang.net/"
+        },
+        {
+            name: "接号码",
+            description: "在线短信接收平台,拥有中国、美国、英国号码接收短信验证码。临时虚拟手机号在线接收短信，接收短信网页版和APP，无需注册，界面简洁，短信显示迅速，保卫您的隐私",
+            pic: "jiehaoma",
+            link: "https://jiemahao.com/"
         },
         {
             name: "视频鱼",
@@ -1367,10 +1551,10 @@ export default {
             link: "https://www.sbkko.com/"
         },
         {
-            name: "高效搜罗",
-            description: "精准的职业导航,定时更新分享优质职业书签",
-            pic: "gaoxiaosouluo",
-            link: "http://www.gaoxiaosouluo.com/"
+            name: "比特星球",
+            description: "汇集全网优质网址及资源的中文上网导航。比特星球致力于为用户提供更简单、更实用、更贴心的导航服务。实时收录影视、音乐、小说、游戏、搜索等分类的网址和内容,让您的网络生活更简单精彩。",
+            pic: "bitexingqiu",
+            link: "https://www.btxqw.com/"
         },
         {
             name: "MindMaster",

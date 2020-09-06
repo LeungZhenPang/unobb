@@ -2,7 +2,9 @@
   <div class="wrap" @mousewheel="go">
     <!-- 主页面 -->
     <transition-group tag="ul" name="fade" class="clearfix content" v-for="(items,index) in curData" :key='index' v-show='curIndex == index'>
-      <li v-for="(item,n) in items" :key="n" :class="{transition: transitionLi, toleft, toright}">
+      <li v-for="(item,n) in items" :key="n" :class="{transition: transitionLi, toleft, toright}"
+      @click="addWeb(item)"
+      @click.right.prevent="delWeb(item)">
         <a class="clearfix" :href="item.link" :key='n' target='_blank'>
           <img :src='"./images/"+item.pic+".png"' :alt="item.name" />
           <div>
@@ -34,9 +36,34 @@ export default {
       toleft: false,  //左切屏动画
       toright: false,  //右切屏动画
       gotime: ''     //保存切屏延时器
-    };
+    };item
   },
   methods: {
+      //删除最近浏览
+      delWeb(item){
+        if(this.$route.params.name === 'zuijin'){
+          let arr = JSON.parse(localStorage.getItem('zuijin'))
+          let index = arr.findIndex((even)=>even.name === item.name)
+          arr.splice(index, 1)
+          localStorage.setItem('zuijin',JSON.stringify(arr))
+          this.webData.zuijin = JSON.parse(localStorage.getItem('zuijin'))
+          this.transformArr(this.webData[this.$route.params.name])
+        }
+      },
+      addWeb(item){     //添加最近点击网站
+        if(!localStorage.getItem("zuijin")){
+          let arr = JSON.stringify([item])
+          localStorage.setItem('zuijin',arr)
+        }else{
+          let arr = JSON.parse(localStorage.getItem('zuijin'))
+          let have = arr.some((even)=>even.name === item.name)    //查看是否已经存在
+          if(!have){    //不存在则添加
+            arr.unshift(item)
+            localStorage.setItem('zuijin',JSON.stringify(arr))
+            this.webData.zuijin = JSON.parse(localStorage.getItem('zuijin'))
+          }
+        }
+      },
       //滚动切屏
       go(){
         if(event.wheelDelta < 0 && this.curIndex < this.curData.length-1) {     //滚轮下滑
@@ -93,6 +120,7 @@ export default {
     }
   },
   created() {
+    this.webData.zuijin = JSON.parse(localStorage.getItem('zuijin'))
     this.transformArr(this.webData[this.$route.params.name])
   },
   mounted() {

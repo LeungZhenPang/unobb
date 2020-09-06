@@ -19,7 +19,7 @@ export default [
             },
             {
                 name: "电影",
-                link: "http://ifkdy.com/?q=",
+                link: "https://v.yewan.org/search.php?searchword=",
                 placeholder: "输入影视关键词"
             },
             {
@@ -51,6 +51,11 @@ export default [
                 name: "MDN",
                 link: "https://developer.mozilla.org/zh-CN/search?q=",
                 placeholder: "MDN Web 文档"
+            },
+            {
+                name: "视频解析",
+                link: "https://www.91jxs.com/jiexi/?url=",
+                placeholder: "输入视频链接地址哦"
             }
         ]
     },
@@ -86,6 +91,31 @@ export default [
                 name: "秘迹",
                 link: "https://mijisou.com/?q=",
                 placeholder: "搜索..."
+            },
+            {
+                name: "Google",
+                link: "https://www.google.com/search?q=",
+                placeholder: "谷歌搜索"
+            },
+            {
+                name: "Yandex",
+                link: "https://yandex.com/search/?text=",
+                placeholder: "俄罗斯第一大搜索引擎"
+            },
+            {
+                name: "神马",
+                link: "https://yz.m.sm.cn/s?q=",
+                placeholder: "神马是专注移动互联网的搜索引擎"
+            },
+            {
+                name: "Magi",
+                link: "https://magi.com/search?q=",
+                placeholder: "梳理互联网的知识引擎"
+            },
+            {
+                name: "Aol.",
+                link: "https://search.aol.com/aol/search?q=",
+                placeholder: "美国在线旗下搜索引擎网站"
             }
         ]
     },
@@ -140,19 +170,43 @@ export default [
         searchType: "电影",
         data: [
             {
-                name: "疯狂影视",
-                link: "http://ifkdy.com/search?key=",
-                placeholder: "输入影视关键词"
-            },
-            {
                 name: "影视库",
                 link: "https://v.yewan.org/search.php?searchword=",
                 placeholder: "在影视库中搜索电影关键词"
             },
             {
+                name: "疯狂影视",
+                link: "http://ifkdy.com/search?key=",
+                placeholder: "输入影视关键词"
+            },
+            {
                 name: "upfox",
                 link: "https://www.cupfox.com/?key=",
                 placeholder: "电影、剧集、动漫、节目......"
+            }
+        ]
+    }, {
+        searchType: "招聘",
+        data: [
+            {
+                name: "boss",
+                link: "https://www.zhipin.com/job_detail/?query=",
+                placeholder: "搜索职位、公司"
+            },
+            {
+                name: "拉钩",
+                link: "https://www.lagou.com/jobs/list_",
+                placeholder: "搜索职位、公司或地点"
+            },
+            {
+                name: "猎聘",
+                link: "https://www.liepin.com/zhaopin/?key=",
+                placeholder: "输入职位关键词"
+            },
+            {
+                name: "企查查",
+                link: "https://www.qcc.com/search?key=",
+                placeholder: "请输入企业名、人名、产品名、或地址电话..."
             }
         ]
     },

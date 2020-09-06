@@ -51,18 +51,21 @@ export default {
     return {
       routerNavData: [
         //路由导航渲染数据
-        { name: "榜单", link: "bangdan", icon: "icon-bangdan" },
+        { name: "最近", link: "zuijin", icon: "icon-bangdan" },
         { name: "推荐", link: "tuijian", icon: "icon-tuijian" },
         { name: "视频", link: "shipin", icon: "icon-shipin" },
         { name: "音乐", link: "yinyue", icon: "icon-tubiaozhizuomobanyihuifu-"},
         { name: "电影", link: "dianying", icon: "icon-dianying" },
+        { name: "购物", link: "gouwu", icon: "icon-gouwu" },
         { name: "直播", link: "zhibo", icon: "icon-airudiantubiaohuizhi-zhuanqu_zhibojian" },
         { name: "男生", link: "nansheng", icon: "icon-nanxing" },
         { name: "女生", link: "nvsheng", icon: "icon-iconnvhai" },
-        { name: "旅游", link: "lvyou", icon: "icon-lvyou" },
+        { name: "出行", link: "chuxing", icon: "icon-lvyou" },
         { name: "摄影", link: "sheying", icon: "icon-ziyuan" },
         { name: "设计", link: "sheji", icon: "icon-shejishi1" },
+        { name: "剪辑", link: "jianji", icon: "icon-shejishi1" },
         { name: "程序员", link: "chengxuyuan", icon: "icon-daimaguanli" },
+        { name: "新媒体", link: "xinmeiti", icon: "icon-xinmeiti"},
         { name: "外贸", link: "waimao", icon: "icon-maoyijinchukoulingshoupifa"},
         { name: "每日", link: "meiri", icon: "icon-taiyang" },
         { name: "工具", link: "gongju", icon: "icon-icon-test" }
@@ -95,7 +98,7 @@ export default {
   border-bottom: 1px solid #ddd;
   li {
     float: left;
-    width: 80px;
+    width: 66.6px;
     margin-bottom: -2px;
     padding-bottom: 10px;
     text-align: center;
@@ -107,7 +110,7 @@ export default {
     &.active {
       color: @baseColor;
       .line {
-        width: 80px;
+        width: 66.6px;
       }
     }
     span {

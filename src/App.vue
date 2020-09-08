@@ -63,7 +63,7 @@ export default {
         { name: "出行", link: "chuxing", icon: "icon-lvyou" },
         { name: "摄影", link: "sheying", icon: "icon-ziyuan" },
         { name: "设计", link: "sheji", icon: "icon-shejishi1" },
-        { name: "剪辑", link: "jianji", icon: "icon-shejishi1" },
+        { name: "剪辑", link: "jianji", icon: "icon-shipinjianji" },
         { name: "程序员", link: "chengxuyuan", icon: "icon-daimaguanli" },
         { name: "新媒体", link: "xinmeiti", icon: "icon-xinmeiti"},
         { name: "外贸", link: "waimao", icon: "icon-maoyijinchukoulingshoupifa"},

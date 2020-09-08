@@ -181,7 +181,7 @@ export default [
             },
             {
                 name: "upfox",
-                link: "https://www.cupfox.com/?key=",
+                link: "https://www.cupfox.com/search?key=",
                 placeholder: "电影、剧集、动漫、节目......"
             }
         ]
